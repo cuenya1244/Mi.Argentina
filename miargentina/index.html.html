@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Argentina</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-screen" id="loginScreen">
+    <h1>Mi Argentina</h1>
+    <input type="text" id="username" placeholder="Usuario">
+    <input type="password" id="password" placeholder="Contraseña">
+    <button onclick="login()">Ingresar</button>
+  </div>
+
+  <div class="app-screen" id="appScreen" style="display:none;">
+    <div class="header">
+      <h2>Bienvenido, <span id="userDisplay">Usuario</span></h2>
+    </div>
+
+    <div class="dni-card" id="dniCard">
+      <h3>DNI</h3>
+      <p>Nombre: <span id="dniName">Juan Pérez</span></p>
+      <p>DNI: <span id="dniNumber">12.345.678</span></p>
+      <p>Fecha de nacimiento: <span id="dniBirth">01/01/1990</span></p>
+    </div>
+
+    <div class="menu">
+      <button class="menu-btn" onclick="alert('Trámites de ejemplo')">Trámites</button>
+      <button class="menu-btn" onclick="alert('Documentos de ejemplo')">Documentos</button>
+      <button class="menu-btn" onclick="alert('Notificaciones de ejemplo')">Notificaciones</button>
+      <button class="menu-btn logout" onclick="logout()">Cerrar sesión</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
